@@ -48,7 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetAllPipeAccessory.cs" />
+    <Compile Include="02_CheckType.cs" />
+    <Compile Include="04_CheckParameter.cs" />
+    <Compile Include="05_FilterByParameter.cs" />
+    <Compile Include="03_FindByElementClass.cs" />
+    <Compile Include="01_GetAllPipeAccessory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

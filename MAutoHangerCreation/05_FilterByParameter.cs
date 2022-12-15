@@ -10,19 +10,26 @@ using System.Windows.Forms;
 
 namespace MAutoHangerCreation
 {
+    //本案例利用ElementClassFilter來篩選出FamilySymbol
+
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
-    public class GetAllPipeAccessory : IExternalCommand{
+    public class FilterByParameter : IExternalCommand{
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements){
             UIApplication uiapp = commandData.Application;
 			UIDocument uidoc = uiapp.ActiveUIDocument;
 			Document doc = uidoc.Document;
             StringBuilder st = new StringBuilder();
 
-            FilteredElementCollector collection = new FilteredElementCollector(doc);
-            ElementFilter filter = new ElementCategoryFilter(BuiltInCategory.OST_PipeAccessory);
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ElementClassFilter filter1 = new ElementClassFilter(typeof(FamilySymbol));
+            ElementCategoryFilter filter2 = new ElementCategoryFilter(BuiltInCategory.OST_PipeAccessory);
+            LogicalAndFilter andFilter = new LogicalAndFilter(filter1, filter2);
+            IList<Element> elemList = collector.WherePasses(andFilter).ToElements();
 
-            IList<Element> elemList = collection.WherePasses(filter).ToElements();
             st.AppendLine("FilteredElementCollector收集到的有：");
+            
+
+            
             foreach (Element elem in elemList) {
                 Parameter para = elem.get_Parameter(BuiltInParameter.ALL_MODEL_FAMILY_NAME);
                 st.AppendLine(para.AsString() + "......" + elem.Name);
