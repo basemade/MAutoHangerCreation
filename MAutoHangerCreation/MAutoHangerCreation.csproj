@@ -53,6 +53,7 @@
     <Compile Include="05_FilterByParameter.cs" />
     <Compile Include="03_FindByElementClass.cs" />
     <Compile Include="01_GetAllPipeAccessory.cs" />
+    <Compile Include="11_CreateInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
