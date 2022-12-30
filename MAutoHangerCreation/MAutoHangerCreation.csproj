@@ -53,7 +53,7 @@
     <Compile Include="05_FilterByParameter.cs" />
     <Compile Include="03_FindByElementClass.cs" />
     <Compile Include="01_GetAllPipeAccessory.cs" />
-    <Compile Include="14_ProjectXY.cs" />
+    <Compile Include="14_ProjectXYandZ.cs" />
     <Compile Include="13_PickPointOnElement.cs" />
     <Compile Include="xx_CreateGeometryOptions.cs" />
     <Compile Include="12_SelectionFilter.cs" />
