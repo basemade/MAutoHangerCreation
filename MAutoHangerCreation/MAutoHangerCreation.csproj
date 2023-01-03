@@ -53,6 +53,11 @@
     <Compile Include="05_FilterByParameter.cs" />
     <Compile Include="03_FindByElementClass.cs" />
     <Compile Include="01_GetAllPipeAccessory.cs" />
+    <Compile Include="202_TransactGroup.cs" />
+    <Compile Include="201_Transact.cs" />
+    <Compile Include="21_MultiCreate.cs" />
+    <Compile Include="16_Direction_II.cs" />
+    <Compile Include="15_Direction_I.cs" />
     <Compile Include="14_ProjectXYandZ.cs" />
     <Compile Include="13_PickPointOnElement.cs" />
     <Compile Include="xx_CreateGeometryOptions.cs" />
