@@ -12,9 +12,6 @@ using Autodesk.Revit.UI.Selection;
 
 namespace MAutoHangerCreation
 {
-    //為達到修正朝向，需再修改1處
-    //region 獲取點的方式 2，step3：修正Z位置
-
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
     public class Direction_II : IExternalCommand
     {
@@ -148,7 +145,7 @@ namespace MAutoHangerCreation
 
             #region 修正朝向
             double ptClosestPara = projectResult.Parameter;
-            Transform transform = locaCrv.Curve.ComputeDerivatives(ptClosestPara, true);
+            Transform transform = locaCrv.Curve.ComputeDerivatives(0, true);
             //https://www.revitapidocs.com/2020.1/93092a44-85f1-15be-a618-817c763f8994.htm
             XYZ dir = transform.BasisX;
             //BasisX為曲線上點的切線方向，BasisY和Z是法線

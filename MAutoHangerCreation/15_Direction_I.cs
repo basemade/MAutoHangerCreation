@@ -149,7 +149,7 @@ namespace MAutoHangerCreation
 
             #region 修正朝向
             double ptClosestPara = projectResult.Parameter;
-            Transform transform = locaCrv.Curve.ComputeDerivatives(ptClosestPara, true);
+            Transform transform = locaCrv.Curve.ComputeDerivatives(0, true);
             //https://www.revitapidocs.com/2020.1/93092a44-85f1-15be-a618-817c763f8994.htm
             XYZ dir = transform.BasisX;
             //BasisX為曲線上點的切線方向，BasisY和Z是法線
