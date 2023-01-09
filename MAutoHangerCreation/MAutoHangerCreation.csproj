@@ -53,6 +53,7 @@
     <Compile Include="05_FilterByParameter.cs" />
     <Compile Include="03_FindByElementClass.cs" />
     <Compile Include="01_GetAllPipeAccessory.cs" />
+    <Compile Include="204_TransactGroupIII.cs" />
     <Compile Include="203_TransactGroupII.cs" />
     <Compile Include="202_TransactGroupI.cs" />
     <Compile Include="201_Transact.cs" />
